@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace rpsls
+{
+    class Game
+    {
+
+        //member variable (HAS A)
+        //display rules 
+        //
+
+        
+
+
+
+
+
+        //constructors
+
+
+
+        //member methods (can do)
+
+    }
+}
