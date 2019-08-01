@@ -23,20 +23,20 @@ namespace rpsls
         //member methods (can do)
         public void RunGame()
         {
-            getNumberOfPlayers = GetNumberOfPlayer();
             DisplayRules();
+            int numberOfPlayers = GetNumberOfPlayer();
+            SettingUpPlayers(numberOfPlayers);
+            player1.ChooseName();
+            player2.ChooseName();
+
 
         }
         public int GetNumberOfPlayer()
         {
             //double NumberofPlayers;
             Console.WriteLine("How many Players?");
-
-            return int.Parse(Console.ReadLine());
-
-
-
-
+            int numberOfPlayers = int.Parse(Console.ReadLine());
+            return numberOfPlayers;
         }
 
         public void DisplayRules()
@@ -58,32 +58,27 @@ namespace rpsls
         }
 
 
-        //private void settingUpPlayers(int NumberOfPlayers)
-        //{
-        //    if (int NumberOfPlayers() == 1)
-        //        Player1 = new Human();
-        //    Player2 = new CPU();
-
-        //    else (Player1 = new Human();
-        //    Player2 = new Human();
-
-
-            //}
-            //public void RunGame();
-            //    int number = GetNumberOfPlayers();
-            //    SettingUpPlayer(numberPlayers)
-            //    player1 this.ChooseName();
-            //    //player1 ChooseGesture();
-            //   // player2 ChooseGesture();
-
-            //    }
-
-
-
-
-
+        private void SettingUpPlayers(int numberOfPlayers)
+        {
+            if (numberOfPlayers == 1)
+            {
+                player1 = new Human();
+                player2 = new CPU();
+            }
+            else
+            {
+                player1 = new Human();
+                player2 = new Human();
+            }
 
         }
+        
+
+
+
+
+
     }
-//}
+}
+
 
