@@ -20,11 +20,26 @@ namespace rpsls
 
 
         //constructor defalut variables
+        //public Score()
+        //{
+        //    int wintCounter = 0;
 
+        //}
 
 
 
         //member method (can Do)
-        public abstract void chooseName();
-        public abstract void chooseGesture();
+
+        public string ChooseName()
+        {
+            Console.WriteLine("Choose Your Name");
+            playerName = Console.ReadLine();
+            return playerName;
+        }
+
+
+
+        //public abstract void chooseGesture();
+    }
 }
+    

@@ -10,29 +10,77 @@ namespace rpsls
     {
 
         //member variable (HAS A)
-        //display rules 
         //
-         Player player1;
-         Player player2;
-        private int getNumberOfPlayers;
+        Player player1;
+        Player player2;
+        private double getNumberOfPlayers;
         public int winningThreshold;
+        string Rules;
 
 
         //constructors
 
-        public Game()
-        { private int getNumberOfPlayers;
-        Console.WriteLine("How many Players?");
-        int.Parse(Console.ReadMe());
-        return getNumberOpPlayers;
+        //member methods (can do)
+        public void RunGame()
+        {
+            getNumberOfPlayers = GetNumberOfPlayer();
+        }
+        public int GetNumberOfPlayer()
+        {
+            double NumberofPlayers;
+            Console.WriteLine("How many Players?");
+
+            return int.Parse(Console.ReadLine());
+
+
+
 
         }
 
-        //member methods (can do)
+        public string DisplayRules()
+        {
+            Console.WriteLine("Here are the rules;" + "Rock beats Scissors," +
+               " Scissors beats Paper" +
+               " Paper beats Rock," +
+               " Lizard beats Paper" +
+               "Spock beats Rock" +
+               "Rock beats Lizard" +
+               "Scissors beats Lizard" +
+               "Paper beats Spock" +
+               "Lizard beats Spock" +
+               "Spock beats Scissors");
+            return (Console.ReadLine()); 
+          
+     
+        }
 
 
-        
+        //private void settingUpPlayers(int NumberOfPlayers)
+        //{
+        //    if (int NumberOfPlayers() == 1)
+        //        Player1 = new Human();
+        //    Player2 = new CPU();
+
+        //    else (Player1 = new Human();
+        //    Player2 = new Human();
+
+
+            //}
+            //public void RunGame();
+            //    int number = GetNumberOfPlayers();
+            //    SettingUpPlayer(numberPlayers)
+            //    player1 this.ChooseName();
+            //    //player1 ChooseGesture();
+            //   // player2 ChooseGesture();
+
+            //    }
+
+
+
+
+
+
+        }
     }
-public void RunGame();
-    
-    }
+//}
+

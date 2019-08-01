@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rpsls
 {
-    class CPU
+    class CPU : Player
     {//child class of player class
      //member variable
 
@@ -16,7 +16,7 @@ namespace rpsls
 
 
         //member methods
-        public override choosegesture();
+        //public override chooseGesture();
         //find out a random function to generate choice 
     }
 }

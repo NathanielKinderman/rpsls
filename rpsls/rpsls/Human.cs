@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rpsls
 {
-    class Human
+    class Human: Player
     {//child class of player class
      //member variables (Has A)
 
@@ -15,14 +15,14 @@ namespace rpsls
 
 
         //member method (Can do)
-        public override void ChooseName() {
-            Console.WriteLine("Choose Your Name");
-            chooseName = Console.Readme;
-        }
+       //ChooseName();
         
-           
-        public override void chooseGesture;
-        Console.WriteLine("Choose what you are going to throw");
-        chooseGesture=Console.Readme;
+           public void ChooseHumanName()
+        {
+            playerName = Console.ReadLine();
+        }
+        //public override chooseGesture;
+        //Console.WriteLine("Choose what you are going to throw");
+        //chooseGesture=Console.Readme;
     }
 }
