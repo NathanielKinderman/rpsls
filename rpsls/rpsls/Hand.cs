@@ -8,20 +8,24 @@ namespace rpsls
 {
     class Hand
     {//member variable(HAS A)
+        public int Gesture;
 
 
 
+        //constructor
+        public Hand(int Gesture)
+        {
+            Gesture = Gesture;
+          
+        }
 
-     //constructor
 
 
-
-
-     //member method( can do)
-     //throw rock 
-     //throw paper
-     //throw scissor
-     //throw lizard
-     //throw spock
+        //member method( can do)
+        //throw rock 
+        //throw paper
+        //throw scissor
+        //throw lizard
+        //throw spock
     }
 }
