@@ -24,10 +24,12 @@ namespace rpsls
         public void RunGame()
         {
             getNumberOfPlayers = GetNumberOfPlayer();
+            DisplayRules();
+
         }
         public int GetNumberOfPlayer()
         {
-            double NumberofPlayers;
+            //double NumberofPlayers;
             Console.WriteLine("How many Players?");
 
             return int.Parse(Console.ReadLine());
@@ -37,19 +39,20 @@ namespace rpsls
 
         }
 
-        public string DisplayRules()
+        public void DisplayRules()
         {
-            Console.WriteLine("Here are the rules;" + "Rock beats Scissors," +
-               " Scissors beats Paper" +
-               " Paper beats Rock," +
-               " Lizard beats Paper" +
-               "Spock beats Rock" +
-               "Rock beats Lizard" +
-               "Scissors beats Lizard" +
-               "Paper beats Spock" +
-               "Lizard beats Spock" +
+            Console.WriteLine("Here are the rules:" + "\n" +
+                "Rock beats Scissors," + "\n" +
+               "Scissors beats Paper" + "\n" +
+               "Paper beats Rock," + "\n" +
+               "Lizard beats Paper" + "\n" +
+               "Spock beats Rock" + "\n" +
+               "Rock beats Lizard" + "\n" +
+               "Scissors beats Lizard" + "\n" +
+               "Paper beats Spock" + "\n" +
+               "Lizard beats Spock" + "\n" +
                "Spock beats Scissors");
-            return (Console.ReadLine()); 
+            Console.ReadLine(); 
           
      
         }
