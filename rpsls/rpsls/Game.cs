@@ -16,10 +16,14 @@ namespace rpsls
         private double getNumberOfPlayers;
         public int winningThreshold;
         string Rules;
+        List<string> Gestures;
 
 
         //constructors
-
+        public Game()
+        {
+            Gestures = new List<string>() { "rock", "paper", "scissor", "lizard", "spock" };
+        }
         //member methods (can do)
         public void RunGame()
         {
@@ -42,16 +46,16 @@ namespace rpsls
         public void DisplayRules()
         {
             Console.WriteLine("Here are the rules:" + "\n" +
-                "Rock beats Scissors," + "\n" +
-               "Scissors beats Paper" + "\n" +
-               "Paper beats Rock," + "\n" +
-               "Lizard beats Paper" + "\n" +
-               "Spock beats Rock" + "\n" +
-               "Rock beats Lizard" + "\n" +
-               "Scissors beats Lizard" + "\n" +
-               "Paper beats Spock" + "\n" +
-               "Lizard beats Spock" + "\n" +
-               "Spock beats Scissors");
+                "Rock crush Scissors," + "\n" +
+               "Scissors cuts Paper" + "\n" +
+               "Paper covers Rock," + "\n" +
+               "Lizard eats Paper" + "\n" +
+               "Spock vaporize Rock" + "\n" +
+               "Rock crushes Lizard" + "\n" +
+               "Scissors decapitates Lizard" + "\n" +
+               "Paper disproves Spock" + "\n" +
+               "Lizard poisons Spock" + "\n" +
+               "Spock smashes Scissors");
             Console.ReadLine(); 
           
      
@@ -72,6 +76,22 @@ namespace rpsls
             }
 
         }
+      
+
+
+
+
+
+        //public Wincounter()
+        //{
+        //   while(player1.winCounter < winningThreshold && player2.winCounter < winningThreshold)
+        //    {
+
+
+
+        //    }
+
+        //}
         
 
 

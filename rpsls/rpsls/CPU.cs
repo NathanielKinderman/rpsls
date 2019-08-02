@@ -16,7 +16,6 @@ namespace rpsls
 
 
         //member methods
-        //public override chooseGesture();
-        //find out a random function to generate choice 
+        
     }
 }

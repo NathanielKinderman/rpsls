@@ -17,12 +17,13 @@ namespace rpsls
         public string chooseGesture;
 
 
-
+       
+      
 
         //constructor defalut variables
         //public Score()
         //{
-        //    int wintCounter = 0;
+          int wintCounter = 0;
 
         //}
 
@@ -39,7 +40,13 @@ namespace rpsls
 
 
 
-        //public abstract void chooseGesture();
+        //public string ChooseGesture()
+        //{
+        //    Console.WriteLine("Make your Choice to Throw");
+        //    playerGesture = Console.ReadLine();
+        //    return playerGesture;
+
+        //}
     }
 }
     
