@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rpsls
 {
-    class Player
+    public abstract class Player
     {
         //member variable (HAS A)
         // abstract parent classes 
@@ -15,14 +15,18 @@ namespace rpsls
         public string playerName;
         public int winCounter;
         public string chooseGesture;
+        public List<string> GesturesTwo;
 
 
-       
-      
+
 
         //constructor defalut variables
         //public Score()
         //{
+        public Player()
+        {
+            GesturesTwo = new List<string>() { "rock", "paper", "scissor", "lizard", "spock" };
+        }
 
         //}
 
@@ -30,22 +34,9 @@ namespace rpsls
 
         //member method (can Do)
 
-        public string ChooseName()
-        {
-            Console.WriteLine("Choose Your Name");
-            playerName = Console.ReadLine();
-            return playerName;
-        }
+        public abstract string ChooseName();
 
-
-
-        public string ChooseGesture()
-        {
-            Console.WriteLine("Make your Choice to Throw");
-            chooseGesture = Console.ReadLine();
-            return chooseGesture;
-
-        }
+        public abstract string ChooseGesture();
     }
 }
     

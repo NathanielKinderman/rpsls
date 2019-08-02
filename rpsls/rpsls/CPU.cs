@@ -16,6 +16,16 @@ namespace rpsls
 
 
         //member methods
-        
+        public override string ChooseName()
+        {
+            Console.WriteLine("Choose Computer's Name");
+            playerName = Console.ReadLine();
+            return playerName;
+        }
+        public override string ChooseGesture()
+        {
+            chooseGesture = GesturesTwo[1];
+            return chooseGesture;
+        }
     }
 }

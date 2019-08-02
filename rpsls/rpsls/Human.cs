@@ -15,16 +15,19 @@ namespace rpsls
 
 
         //member method (Can do)
-      
-           public void ChooseName()
-        {
-            playerName = Console.ReadLine();
-        }
-        //   public void  ChooseGesture();
-        //{
-        //    playerGesture = Console.ReadLine();
 
-        //}
-        
+        public override string ChooseName()
+        {
+            Console.WriteLine("Choose Your Name");
+            playerName = Console.ReadLine();
+            return playerName;
+        }
+        public override string ChooseGesture()
+        {
+            Console.WriteLine("Make your Choice to Throw");
+            chooseGesture = Console.ReadLine();
+            return chooseGesture;
+
+        }
     }
 }
