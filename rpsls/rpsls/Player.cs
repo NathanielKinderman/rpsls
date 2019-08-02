@@ -14,8 +14,8 @@ namespace rpsls
         //pointthreshold
         public string playerName;
         public int winCounter;
-        public string chooseGesture;
-        public List<string> GesturesTwo;
+        public string gesture;
+        public List<string> Gestures;
 
 
 
@@ -25,7 +25,7 @@ namespace rpsls
         //{
         public Player()
         {
-            GesturesTwo = new List<string>() { "rock", "paper", "scissor", "lizard", "spock" };
+            Gestures = new List<string>() { "rock", "paper", "scissor", "lizard", "spock" };
         }
 
         //}
@@ -34,9 +34,9 @@ namespace rpsls
 
         //member method (can Do)
 
-        public abstract string ChooseName();
+        public abstract void ChooseName();
 
-        public abstract string ChooseGesture();
+        public abstract void ChooseGesture();
     }
 }
     
