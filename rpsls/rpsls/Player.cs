@@ -40,13 +40,13 @@ namespace rpsls
 
 
 
-        //public string ChooseGesture()
-        //{
-        //    Console.WriteLine("Make your Choice to Throw");
-        //    playerGesture = Console.ReadLine();
-        //    return playerGesture;
+        public string ChooseGesture()
+        {
+            Console.WriteLine("Make your Choice to Throw");
+            chooseGesture = Console.ReadLine();
+            return chooseGesture;
 
-        //}
+        }
     }
 }
     
