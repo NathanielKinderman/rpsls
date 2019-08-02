@@ -23,7 +23,6 @@ namespace rpsls
         //constructor defalut variables
         //public Score()
         //{
-          int wintCounter = 0;
 
         //}
 

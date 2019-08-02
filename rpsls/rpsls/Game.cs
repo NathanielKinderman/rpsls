@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rpsls
 {
-    class Game
+    public class Game
     {
 
         //member variable (HAS A)
@@ -17,9 +17,15 @@ namespace rpsls
         public int winningThreshold;
         string Rules;
         List<string> Gestures;
+        private object results;
 
 
         //constructors
+        public Game()
+        {
+            Gestures = new List<string>() { "rock", "paper", "scissor", "lizard", "spock" };
+            winningThreshold = 3;
+        }
 
         //member methods (can do)
         public void RunGame()
@@ -30,7 +36,14 @@ namespace rpsls
             player1.ChooseName();
             player2.ChooseName();
 
+            while (player1.winCounter < winningThreshold && player2.winCounter < winningThreshold)
+            {
+                player1.ChooseGesture();
+                player2.ChooseGesture();
+                DetermineRoundWinner();
+            }
 
+            DetermineGameWinner();
         }
         public int GetNumberOfPlayer()
         {
@@ -75,52 +88,84 @@ namespace rpsls
         }
 
 
-        public Game()
+        public void DetermineGameWinner()
         {
-            Gestures = new List<string>() { "rock", "paper", "scissor", "lizard", "spock" };
 
-            if (player1.chooseGesture == "rock")
+            if (player1.winCounter > player2.winCounter)
             {
-                if (player2.chooseGesture == "scissors")
+
+                Console.WriteLine("Player 1 won this game.\n");
+            }
+            else
+            {
+
+                Console.WriteLine("Player 2 won this game.\n");
+            }
+
+            Console.WriteLine("Total score: " + player1.winCounter + "-" + player2.winCounter + "\n");
+
+        }
+
+        public void DetermineRoundWinner() { 
+             if (player1.chooseGesture == "rock")
+           
                 {
-                    Console.WriteLine("Rock crushes Scissors");
-                    player1.winCounter++;
+                if (player2.chooseGesture == "scissors")
+                {                     
+                Console.WriteLine("Rock crushes Scissors");
+                player1.winCounter++;
                 }
+
                 else if (player2.chooseGesture == "lizard")
                 {
                     Console.WriteLine("Rock crushes Lizard");
+                    player1.winCounter++;
                 }
+
                 else if (player2.chooseGesture == "paper")
                 {
                     Console.WriteLine("Paper covers Rock");
+                    player2.winCounter++;
                 }
+
                 else if (player2.chooseGesture == "spock")
                 {
                     Console.WriteLine("Spock vaporize Rock");
+                    player2.winCounter++;
                 }
+
                 else if (player2.chooseGesture == "rock")
                 {
                     Console.WriteLine("Draw! Please try again.");
                 }
             }
+
             else if (player1.chooseGesture == "paper")
             {
                 if (player2.chooseGesture == "rock")
                 {
                     Console.WriteLine("Paper covers Rock");
+                    player1.winCounter++;
                 }
+
                 else if (player2.chooseGesture == "spock")
                 {
                     Console.WriteLine("Paper disproves Spock");
+                    player1.winCounter++;
                 }
+
                 else if (player2.chooseGesture == "scissors")
                 {
                     Console.WriteLine("Scissors cuts Paper");
+                    player2.winCounter++;
                 }
+
                 else if (player2.chooseGesture == "lizard")
                 {
                     Console.WriteLine("Lizard eats Paper");
+                    player2.winCounter++;
                 }
+
                 else if (player2.chooseGesture == "paper")
                 {
                     Console.WriteLine("Draw! Please try again.");
@@ -131,18 +176,26 @@ namespace rpsls
                     if (player2.chooseGesture == "paper")
                     {
                         Console.WriteLine("Scissors cuts Paper");
+                        player1.winCounter++;
                     }
+
                     else if (player2.chooseGesture == "lizard")
                     {
                         Console.WriteLine("Scissors decapitates Lizard");
+                        player1.winCounter++;
                     }
+
                     else if (player2.chooseGesture == "rock")
                     {
                         Console.WriteLine("Rock crushes Scissors");
+                        player2.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "spock")
                     {
                         Console.WriteLine("Spock smashes Scissors");
+                        player2.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "scissors")
                     {
@@ -154,18 +207,26 @@ namespace rpsls
                     if (player2.chooseGesture == "spock")
                     {
                         Console.WriteLine("Lizard poisons Spock");
+                        player1.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "paper")
                     {
                         Console.WriteLine("Lizard eats Paper");
+                        player1.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "rock")
                     {
                         Console.WriteLine("Rock crushes Lizard");
+                        player2.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "scissors")
                     {
                         Console.WriteLine("Scissors decapitates Lizard");
+                        player2.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "lizard")
                     {
@@ -177,18 +238,26 @@ namespace rpsls
                     if (player2.chooseGesture == "scissors")
                     {
                         Console.WriteLine("Spock smashes Scissors");
+                        player1.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "rock")
                     {
                         Console.WriteLine("Spock vaporizes Rock");
+                        player1.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "lizard")
                     {
                         Console.WriteLine("Lizard poisons Spock");
+                        player2.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "paper")
                     {
                         Console.WriteLine("Paper disproves Spock");
+                        player2.winCounter++;
+
                     }
                     else if (player2.chooseGesture == "spock")
                     {
@@ -196,26 +265,7 @@ namespace rpsls
                     }
                 }
 
-
             }
-
-
-
-            //public void RunGame()
-            //{
-            //   while(player1.winCounter < winningThreshold && player2.winCounter < winningThreshold)
-            //    {
-
-
-
-            //    }
-
-            //}
-
-
-
-
-
 
         }
     }

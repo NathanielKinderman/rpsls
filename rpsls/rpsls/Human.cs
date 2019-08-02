@@ -16,7 +16,7 @@ namespace rpsls
 
         //member method (Can do)
       
-           public void ChooseHumanName()
+           public void ChooseName()
         {
             playerName = Console.ReadLine();
         }
