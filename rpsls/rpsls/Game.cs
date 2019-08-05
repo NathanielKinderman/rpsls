@@ -29,7 +29,10 @@ namespace rpsls
         
         public void RunGame()
         {
+            Console.WriteLine("Please press enter to see the rules and again press enter to set up the game!");
+            Console.ReadLine();
             DisplayRules();
+                        
             int numberOfPlayers = GetNumberOfPlayer();
             SettingUpPlayers(numberOfPlayers);
             player1.ChooseName();
@@ -39,15 +42,20 @@ namespace rpsls
             {
                 Console.WriteLine(player1.playerName + "!!");
                 player1.ChooseGesture();
-                Console.WriteLine(player1.playerName + " " + "chose to throw" + " " + player1.gesture);
+                Console.Clear();
 
                 Console.WriteLine(player2.playerName + "!!");
                 player2.ChooseGesture();
+                Console.WriteLine(player1.playerName + " " + "chose to throw" + " " + player1.gesture);
                 Console.WriteLine(player2.playerName + " " +"chose to throw" + " " + player2.gesture);
                 
                 DetermineRoundWinner();
                 Console.WriteLine( player1.playerName +" " + "Score is:" + player1.winCounter);
                 Console.WriteLine(player2.playerName + " " + "score is:" + player2.winCounter);
+                
+                DisplayRules();
+                Console.WriteLine("Please choose next gesture!");
+
             }
 
             DetermineGameWinner();
@@ -75,11 +83,10 @@ namespace rpsls
                "Lizard poisons Spock;" + "\n" +
                "Spock smashes Scissors;" + "\n" +
                "\n" +
-               "One player or Two players can play this game" + "\n" +
-               "The game is over when whoever won 2 out 3" + 
+               "The game is over when whoever won 2 out 3" + "\n"+
+               "Press enter to continue" +
                "\n"+
-               "\n"+
-               "Press Enter when Ready!!!");
+               "\n");
             Console.ReadLine();
 
 
@@ -308,10 +315,7 @@ namespace rpsls
                     Console.WriteLine("Draw! Please try again.");
                 }
             }
-            else if (player1.gesture == "flamingo")
-            {
-                Console.Write("8=======D");
-            }
+           
         }
     }
 }
