@@ -93,9 +93,10 @@ namespace rpsls
         }
 
 
-        private void SettingUpPlayers(int numberOfPlayers)
+        private void SettingUpPlayers()
         {
-                        
+            Console.WriteLine("Please choose 1 or 2 players");
+            int numberOfPlayers =  Int32.Parse(Console.ReadLine());
                 if (numberOfPlayers == 1)
                 {
                     player1 = new Human();
@@ -112,12 +113,13 @@ namespace rpsls
             if (numberOfPlayers >= 3)
             {
                 Console.WriteLine("Please choose either 1 or 2 players");
-                //return;
+                SettingUpPlayers();
+                
             }
             else if (numberOfPlayers == 0)                            
             {
                 Console.WriteLine("Please choose either 1 or 2 players");
-                    
+                SettingUpPlayers();     
             }
             
         }
