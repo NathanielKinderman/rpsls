@@ -9,25 +9,24 @@ namespace rpsls
     public class Game
     {
 
-        //member variable (HAS A)
-        //
+        
         Player player1;
         Player player2;
-        private double getNumberOfPlayers;
+        
         public int winningThreshold;
-        string Rules;
+        
         List<string> Gestures;
-        private object results;
+        
 
 
-        //constructors
+       
         public Game()
         {
             Gestures = new List<string>() { "rock", "paper", "scissor", "lizard", "spock" };
             winningThreshold = 2;
         }
 
-        //member methods (can do)
+        
         public void RunGame()
         {
             DisplayRules();
@@ -40,7 +39,8 @@ namespace rpsls
             {
                 Console.WriteLine(player1.playerName + "!!");
                 player1.ChooseGesture();
-                
+                Console.WriteLine(player1.playerName + " " + "chose to throw" + " " + player1.gesture);
+
                 Console.WriteLine(player2.playerName + "!!");
                 player2.ChooseGesture();
                 Console.WriteLine(player2.playerName + " " +"chose to throw" + " " + player2.gesture);
@@ -88,32 +88,31 @@ namespace rpsls
 
         private void SettingUpPlayers(int numberOfPlayers)
         {
-            try
-            {
+                        
                 if (numberOfPlayers == 1)
                 {
                     player1 = new Human();
                     player2 = new CPU();
                 }
-                else
+                else 
                 {
                     player1 = new Human();
                     player2 = new Human();
                 }
-            }
-            catch
+
+
+
+            if (numberOfPlayers >= 3)
             {
-                if (numberOfPlayers > 2 )
-                {
-                    Console.WriteLine("Please choose either 1 or 2 players");
-                    return;
-                }
-                else if (numberOfPlayers < 0)
-                {
-                    Console.WriteLine("Please choose either 1 or 2 players");
-                    return;
-                }
+                Console.WriteLine("Please choose either 1 or 2 players");
+                //return;
             }
+            else if (numberOfPlayers == 0)                            
+            {
+                Console.WriteLine("Please choose either 1 or 2 players");
+                    
+            }
+            
         }
 
 
@@ -309,9 +308,9 @@ namespace rpsls
                     Console.WriteLine("Draw! Please try again.");
                 }
             }
-            else if (player1.gesture == "")
+            else if (player1.gesture == "flamingo")
             {
-                Console.Write("please enter a valid gesture.");
+                Console.Write("8=======D");
             }
         }
     }

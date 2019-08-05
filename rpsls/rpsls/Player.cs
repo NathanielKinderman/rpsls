@@ -8,10 +8,7 @@ namespace rpsls
 {
     public abstract class Player
     {
-        //member variable (HAS A)
-        // abstract parent classes 
-        //name/computer
-        //pointthreshold
+       
         public string playerName;
         public int winCounter;
         public string gesture;
@@ -20,19 +17,16 @@ namespace rpsls
 
 
 
-        //constructor defalut variables
-        //public Score()
-        //{
+        
+        
         public Player()
         {
             Gestures = new List<string>() { "rock", "paper", "scissor", "lizard", "spock" };
         }
 
-        //}
+        
 
 
-
-        //member method (can Do)
 
         public abstract void ChooseName();
 

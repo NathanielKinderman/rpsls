@@ -7,15 +7,7 @@ using System.Threading.Tasks;
 namespace rpsls
 {
     class Human: Player
-    {//child class of player class
-     //member variables (Has A)
-
-
-        //construtor 
-
-
-        //member method (Can do)
-
+    {
         public override void ChooseName()
         {
             Console.WriteLine("Choose Your Name");

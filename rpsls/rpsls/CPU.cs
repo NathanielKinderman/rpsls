@@ -7,15 +7,7 @@ using System.Threading.Tasks;
 namespace rpsls
 {
     class CPU : Player
-    {//child class of player class
-     //member variable
-
-
-
-        //constructor
-
-
-        //member methods
+    {
         public override void ChooseName()
         {
             Console.WriteLine("Choose Computer's Name");
