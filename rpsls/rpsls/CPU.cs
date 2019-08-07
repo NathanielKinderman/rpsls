@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace rpsls
 {
     class CPU : Player
-    {
+    { 
         public override void ChooseName()
         {
             Console.WriteLine("Choose Computer's Name");
